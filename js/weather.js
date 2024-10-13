@@ -24,10 +24,7 @@ async function getWeather() {
       weatherIco.classList.add(`owf-${data.weather[0].id}`)
       temperature.textContent = Math.round(data.main.temp) + '°C',
       weatherDescription.textContent = data.weather[0].description
-     if (lng === 'en') {
-      windSpeed.textContent = `${dictionary.en.weather.wind}: ${Math.round(data.wind.speed)} m/s`
-      humidity.textContent = `${dictionary.en.weather.humidity}: ${data.main.humidity}%`
-    } else if (lng === 'ru') {
+     if (lng === 'ru') {
       windSpeed.textContent = `${dictionary.ru.weather.wind}: ${Math.round(data.wind.speed)} м/с`
       humidity.textContent = `${dictionary.ru.weather.humidity}: ${data.main.humidity}%`
     }
