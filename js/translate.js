@@ -29,10 +29,21 @@ function settingsTranslate() {
 
 
 function translatePage(lng) {
-    if (lng === 'ru') {
+    if (lng === 'en') {
         setTime(lng)
         translateGreeting(lng)
+        defaultName(lng)
+        defaultCity(lng)
         getWeather(lng)
+        quotes(lng)
+        settingsTranslate(lng)
+    } else if (lng === 'ru') {
+        setTime(lng)
+        translateGreeting(lng)
+        defaultName(lng)
+        defaultCity(lng)
+        getWeather(lng)
+        quotes(lng)
         settingsTranslate(lng)
     }
 }
