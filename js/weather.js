@@ -15,7 +15,7 @@ async function getWeather() {
       throw new Error('City is empty');
     }
     
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=${lng}&units=metric&appid=3b7104992b88be72112fac9a4857fb18`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=ru&units=metric&appid=3b7104992b88be72112fac9a4857fb18`;
     const res = await fetch(url);
     const data = await res.json();
     if (data.weather && data.weather.length > 0) {
@@ -25,12 +25,12 @@ async function getWeather() {
      
        
     
-       if (lng === 'ru') {
+       
           temperature.textContent = Math.round(data.main.temp) + '°C',
          weatherDescription.textContent = data.weather[0].description
       windSpeed.textContent = `${dictionary.en.weather.wind}: ${Math.round(data.wind.speed)} m/s`
       humidity.textContent = `${dictionary.en.weather.humidity}: ${data.main.humidity}%`
-       }
+      
     
   } else {
     throw new Error('Weather data not found');
