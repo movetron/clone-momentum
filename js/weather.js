@@ -25,8 +25,8 @@ async function getWeather() {
       temperature.textContent = Math.round(data.main.temp) + '°C',
       weatherDescription.textContent = data.weather[0].description
      
-      windSpeed.textContent = `${dictionary.ru.weather.wind}: ${Math.round(data.wind.speed)} м/с`
-      humidity.textContent = `${dictionary.ru.weather.humidity}: ${data.main.humidity}%`
+      windSpeed.textContent = `${dictionary.weather.wind}: ${Math.round(data.wind.speed)} м/с`
+      humidity.textContent = `${dictionary.weather.humidity}: ${data.main.humidity}%`
     
   } else {
     throw new Error('Weather data not found');
