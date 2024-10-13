@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+  </head>
+  <body id="body" class="-main-body">
+    <img src="./assets/img/backround/01.jpg" class="background-image" id="image-1" alt="">
+    <img src="./assets/img/backround/02.jpg" class="background-image" id="image-2" alt="">
+    <img src="./assets/img/backround/03.jpg" class="background-image" id="image-3" alt="">
+    <img src="./assets/img/backround/04.jpg" class="background-image" id="image-4" alt="">
+    <header class="header">
+      <div class="block-wrapper">
+        <div class="todo-card">
+          <div class="todos-wrapper">
+              <h3 class="todo-heading">Список задач</h3>
+              <form class="todo-form" id="todo-form">
+                  <input type="text" class="todo-input" id="todo-input">
+                  <button type="submit" class="btn-add">Добавить</button>
+              </form>
+              <div id="todo-list"></div>
+          </div>
+        </div>
+          <div class="weather">
+            <input type="text" class="city" placeholder="Введите город" />
+            <i class="weather-icon owf"></i>
+            <div class="weather-error"></div>
+            <div class="description-container">
+              <span class="temperature"></span>
+              <span class="weather-description"></span>
+            </div>
+            <div class="wind"></div>
+            <div class="humidity"></div>
+          </div>
+        </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time"></time>
+      <date class="date"></date>
+    </main>
+    <div   class="settings-form">
+      <div id="settings"  class="settings-body">
+        <a   class="settings-overlay"></a>
+        <div class="settings-content">
+          <div class="settings-win">
+              <div class="devide"></div>
+            <div class="close-wrapper" ><a class="settings-close" ></a></div>
+            <ul class="settings-list">
+              <li class="settings-list__item">
+                <p class="settings-list__name language"></p>
+                
+              </li>
+            
+              <li class="settings-list__item">
+                <p class="settings-list__name weathers"></p>
+                <button class="settings-list__toggle list-btn" value="true">Enable</button>
+              </li>
+            </ul>
+          </div>
+    </div>
+    </div>
+  </div>
+    <script src="js/lang-weather.js"></script>
+    <script src="js/translate.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/todo-list.js"></script>
+  </body>
+</html>
